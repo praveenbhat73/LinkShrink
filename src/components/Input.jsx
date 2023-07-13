@@ -9,9 +9,9 @@ const Input = ({ setInputValue }) => {
   }
 
   return (
-    <div className="inputContainer">
+    <div className="inputContainer" >
       <h1>URL <span>Shortener</span></h1>
-      <div>
+      <div style={{border:"1px solid white"}} className="inp">
         <input
           type="text"
           placeholder="Paste a link to shorten it"

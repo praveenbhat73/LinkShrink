@@ -35,10 +35,10 @@ const Linkresult = ({ inputValue }) => {
   }, [copied]);
 
   if(loading) {
-    return <p className="noData">Loading...</p>
+    return <p className="noData" style={{fontWeight:"bold"}}> Loading...</p>
   }
   if(error) {
-    return <p className="noData">Something wne t wrong :(</p>
+    return <p className="noData" style={{fontWeight:"bold"}}>Sorry! Something went wrong:(</p>
   }
 
 
@@ -46,12 +46,12 @@ const Linkresult = ({ inputValue }) => {
     <>
       {shortenLink && (
         <div className="result">
-          <p>{shortenLink}</p>
+          <p style={{fontWeight:"bold",background:"white",color:"black"}} >{shortenLink}</p>
           <CopyToClipboard
             text={shortenLink}
             onCopy={() => setCopied(true)}
           >
-            <button className={copied ? "copied" : ""}>Copy to Clipboard</button>
+            <button className={copied ? "copied" : ""} style={{fontWeight:"bold",border:"1px solid grey"}} >Copy to Clipboard</button>
           </CopyToClipboard>
         </div>
       )}
